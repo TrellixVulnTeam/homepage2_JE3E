@@ -1,5 +1,6 @@
-$color-test: #bd7474;
+@import "abstracts/variable";
 
-.test{
-    background-color:$color-test;
-}
+
+@import "base/base";
+
+@import "layout/navigation";

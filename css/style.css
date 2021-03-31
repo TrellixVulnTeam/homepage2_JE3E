@@ -1,2 +1,130 @@
-.test {
-  background-color: #bd7474; }
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* max-widthが520px以下の場合*/
+  font-size: 70%; }
+
+@media screen and (min-width: 520px) {
+  html {
+    font-size: 2vw; } }
+
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 105%; } }
+
+body {
+  box-sizing: border-box; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #5643fa;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  text-align: center;
+  top: 3rem;
+  right: 3rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
+
+.navigation__background {
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  transform: rotate(0deg);
+  top: 4rem;
+  right: 4rem;
+  background-image: radial-gradient(#2998ff, #5643fa);
+  z-index: 1000;
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FFF 50%);
+  background-size: 250%;
+  transition: all .4s; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #2998ff;
+  transform: translateX(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(100) rotate(180deg); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 2.5rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 2.4rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.6rem; }
+  .navigation__icon::after {
+    top: .6rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  transform: rotate(135deg);
+  top: 0; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon:after {
+  transform: rotate(-135deg);
+  top: 0; }
