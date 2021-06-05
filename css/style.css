@@ -20,13 +20,15 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  height: 3000px; }
 
 body {
   font-family: "Lato",sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  padding: 1rem; }
+  padding: 0rem;
+  background-color: #000; }
 
 .navigation__checkbox {
   display: none; }
@@ -137,14 +139,17 @@ body {
   top: 0; }
 
 .header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(246, 180, 131, 0.8), rgba(247, 141, 84, 0.8)), url(../img/background-1.jpg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right bottom, rgba(246, 180, 131, 0.5), rgba(247, 141, 84, 0.5)), url(../img/background-1.jpg);
   background-size: cover;
   background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-  z-index: 1; }
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1s; }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -156,16 +161,63 @@ body {
   color: #fff; }
 
 .section-profile {
-  background: linear-gradient(#FFF, #7ed56f);
-  margin-top: -10rem;
-  padding-top: 10rem;
-  transform: translateY(-40rem);
-  z-index: -1; }
+  padding: 5rem 2rem;
+  opacity: 0;
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.5), rgba(86, 67, 250, 0.5)), url(../img/background-2.jpg);
+  background-size: cover;
+  background-position: top;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  transition: opacity 1s; }
   .section-profile-title {
-    margin-bottom: 10rem;
-    font-size: 4rem;
-    border-top: solid 2px #000;
-    border-bottom: solid 2px #000;
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem; }
+    font-size: 3rem;
+    color: #fff;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+    letter-spacing: 2px;
+    font-weight: bold; }
+  .section-profile-details {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 4rem;
+    padding-left: 4rem; }
+    .section-profile-details-img {
+      width: 10rem;
+      height: auto; }
+    .section-profile-details-text {
+      color: #fff;
+      font-size: 1.4rem;
+      border-bottom: solid 1px #fff;
+      margin-bottom: 2rem;
+      line-height: 1.3; }
+  .section-profile-message {
+    margin-top: 3rem;
+    margin-left: 4rem;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    line-height: 7vh; }
+  .section-profile-footer {
+    margin-top: 5rem;
+    text-align: center; }
+    .section-profile-footer-button {
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 1.5rem 3rem;
+      background-color: #000;
+      border-radius: 40px; }
+
+.anc-button:link, .anc-button:visited {
+  text-decoration: none;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FFF 50%);
+  background-size: 250%;
+  transition: all .4s; }
+
+.anc-button:hover, .anc-button:active {
+  background-position: 100%;
+  color: #2998ff;
+  transform: translateX(1rem); }
