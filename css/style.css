@@ -21,11 +21,25 @@ html {
 body {
   box-sizing: border-box; }
 
+<<<<<<< HEAD
+=======
+body {
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 1.5rem; }
+
+>>>>>>> develop
 .navigation__checkbox {
   display: none; }
 
 .navigation__button {
+<<<<<<< HEAD
   background-color: #5643fa;
+=======
+  background-color: #FFF;
+>>>>>>> develop
   cursor: pointer;
   width: 5rem;
   height: 5rem;
@@ -128,3 +142,21 @@ body {
 .navigation__checkbox:checked + .navigation__button .navigation__icon:after {
   transform: rotate(-135deg);
   top: 0; }
+<<<<<<< HEAD
+=======
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(246, 180, 131, 0.8), rgba(247, 141, 84, 0.8)), url(../img/background-1.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+>>>>>>> develop
