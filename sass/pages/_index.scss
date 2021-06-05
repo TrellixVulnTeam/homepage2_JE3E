@@ -1,0 +1,25 @@
+.heading-primary{
+
+    &--main{
+        color:#fff;
+    }
+}
+
+
+
+.section-profile{
+    background:linear-gradient($color-white,$color-primary-light);
+    margin-top:-10rem;
+    padding-top:10rem;
+    transform:translateY(-40rem);
+    z-index:-1;
+    &-title{
+        margin-bottom:10rem;
+        font-size:4rem;
+        border-top:solid 2px #000;
+        border-bottom:solid 2px #000;
+        text-align:center;
+        padding-top:2rem;
+        padding-bottom:2rem;
+    }
+}

@@ -19,14 +19,14 @@ html {
     font-size: 105%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 body {
   font-family: "Lato",sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
-  padding: 1.5rem; }
+  padding: 1rem; }
 
 .navigation__checkbox {
   display: none; }
@@ -51,7 +51,7 @@ body {
   transform: rotate(0deg);
   top: 4rem;
   right: 4rem;
-  background-image: radial-gradient(#2998ff, #5643fa);
+  background-image: radial-gradient(#4169e1, #7fffd4);
   z-index: 1000;
   transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -143,10 +143,29 @@ body {
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   .header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.heading-primary--main {
+  color: #fff; }
+
+.section-profile {
+  background: linear-gradient(#FFF, #7ed56f);
+  margin-top: -10rem;
+  padding-top: 10rem;
+  transform: translateY(-40rem);
+  z-index: -1; }
+  .section-profile-title {
+    margin-bottom: 10rem;
+    font-size: 4rem;
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
