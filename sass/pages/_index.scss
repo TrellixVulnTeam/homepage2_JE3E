@@ -17,6 +17,15 @@
     }
 }
 
+.section{
+    position:fixed;
+    top:0;
+    left:0;    
+    height:100vh;
+    width:100vw;
+    transition:opacity .5s;
+}
+
 .header__pleasetext{
     margin-top:10rem;
     font-size:3rem;
@@ -26,6 +35,7 @@
 }
 
 
+//////////////// section Profile ////////////////////////////////////////////////////
 
 .section-profile{
     padding:3rem 2rem;
@@ -46,7 +56,7 @@
     // padding-top:10rem;
     // transform:translateY(-40rem);
     z-index:-1;
-    transition:opacity 1s;
+
 
     @media screen and (min-width:1300px){
         display:grid;
@@ -172,3 +182,31 @@
         }
     }
 }
+
+////////////////////////////////////////////////////////////////
+
+
+
+////// section Portfolio //////////////////////////////////////
+.section-portfolio{
+    background-color:#348253;
+    color:#fff;
+    font-size:2rem;
+    z-index:-1;
+    opacity:0;
+}
+
+//////////////////////////////////////////////////////////////
+
+
+
+////// section Hobby //////////////////////////////////////
+.section-hobby{
+    background-color:#2d259e;
+    color:#fff;
+    font-size:2rem;
+    z-index:-1;
+    opacity:0;
+}
+
+//////////////////////////////////////////////////////////////

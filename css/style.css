@@ -21,7 +21,7 @@ html {
 body {
   box-sizing: border-box;
   overflow-x: hidden;
-  height: 3000px; }
+  height: 5000px; }
 
 body {
   font-family: "Lato",sans-serif;
@@ -168,6 +168,14 @@ body {
 .heading-primary--main {
   color: #fff; }
 
+.section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity .5s; }
+
 .header__pleasetext {
   margin-top: 10rem;
   font-size: 3rem;
@@ -186,8 +194,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-  z-index: -1;
-  transition: opacity 1s; }
+  z-index: -1; }
   @media screen and (min-height: 1100px) {
     .section-profile {
       padding: 8rem 2rem; } }
@@ -291,6 +298,20 @@ body {
                     display:none;
                 }
             } */ }
+
+.section-portfolio {
+  background-color: #348253;
+  color: #fff;
+  font-size: 2rem;
+  z-index: -1;
+  opacity: 0; }
+
+.section-hobby {
+  background-color: #2d259e;
+  color: #fff;
+  font-size: 2rem;
+  z-index: -1;
+  opacity: 0; }
 
 .anc-button:link, .anc-button:visited {
   text-decoration: none;
