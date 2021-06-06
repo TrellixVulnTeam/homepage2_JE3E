@@ -15,9 +15,14 @@ const sections = $(".section");
 const sectionInit = function(excludeIndex){
     sections.each(function(index,object){
         if(excludeIndex != index){
+        $(object).addClass("blind");
         $(object).css("opacity",0);
         $(object).css("z-index",-1);
         //$(object).css("display","none");
+        }else{
+            $(object).removeClass("blind");
+            $(object).css("opacity",1);
+            $(object).css("z-index",1);
         }
     });
 }
@@ -35,12 +40,11 @@ $(window).scroll(function(){
     
     //section header
     if(scrollProfile > currentScroll){
-
+        sectionInit(0);
         //console.log("current is header");
         sectionHeader.css("opacity","1");
-        sectionProfile.css("z-index","1");
+        sectionHeader.css("z-index","1");
         //sectionProfile.css("display","block");
-        sectionInit(1);
     }
     //section profile
     //let scrollProfile = $(".header").height() + needScroll;
@@ -51,7 +55,7 @@ $(window).scroll(function(){
         //console.log("current is profile");
         sectionProfile.css("opacity","1");
         sectionProfile.css("z-index","1");
-        sectionInit(2);
+        sectionInit(1);
     }
 
     //section portfolio
@@ -60,7 +64,7 @@ $(window).scroll(function(){
         //console.log("current is profile");
         sectionPortfolio.css("opacity","1");
         sectionPortfolio.css("z-index","1");
-        sectionInit(3);
+        sectionInit(2);
     }
 
     //section hobby
@@ -69,7 +73,7 @@ $(window).scroll(function(){
         //console.log("current is profile");
         sectionHobby.css("opacity","1");
         sectionHobby.css("z-index","1");
-        sectionInit(4);
+        sectionInit(3);
     }
 
 });
