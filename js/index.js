@@ -16,6 +16,7 @@ const sectionInit = function(){
     sections.each(function(index,object){
         $(object).css("opacity",0);
         $(object).css("z-index",-1);
+        //$(object).css("display","none");
     });
 }
 
@@ -35,6 +36,8 @@ $(window).scroll(function(){
         sectionInit();
         //console.log("current is header");
         sectionHeader.css("opacity","1");
+        sectionProfile.css("z-index","1");
+        //sectionProfile.css("display","block");
     }
     //section profile
     //let scrollProfile = $(".header").height() + needScroll;
