@@ -27,7 +27,7 @@
     left:0;    
     height:100vh;
     width:100vw;
-    transition:all .5s;
+    transition:opacity .5s,transform 1s;
 }
 
 .header__pleasetext{
@@ -193,11 +193,26 @@
 
 ////// section Portfolio //////////////////////////////////////
 .section-portfolio{
-    background-color:#348253;
-    color:#fff;
+    padding:3rem 2rem;
+    @media screen and(min-height:1100px){
+        padding:8rem 2rem;
+    }
+    background-image:linear-gradient(to right bottom,rgba($color-portfolio-bg-1,.5),rgba($color-portfolio-bg-2,.5)),url(../img/background-3.jpg);
+    background-size:cover;
+    background-position:top;
     font-size:2rem;
     z-index:-1;
     opacity:0;
+
+    &-title{
+        font-size:3rem;
+        color:#fff;
+        //padding-top:2rem;
+        padding-left:3rem;
+        padding-bottom:1vh;
+        letter-spacing:2px;
+        font-weight:bold;
+    }
 }
 
 //////////////////////////////////////////////////////////////
@@ -206,11 +221,28 @@
 
 ////// section Hobby //////////////////////////////////////
 .section-hobby{
-    background-color:#2d259e;
+    padding:3rem 2rem;
+    @media screen and(min-height:1100px){
+        padding:8rem 2rem;
+    }
+    background-image:linear-gradient(to right bottom,rgba($color-hobby-bg-1,.5),rgba($color-hobby-bg-2,.5)),url(../img/background-4.jpg);
+    background-size:cover;
+    background-position:center;
+    font-size:2rem;
     color:#fff;
     font-size:2rem;
     z-index:-1;
     opacity:0;
+
+    &-title{
+        font-size:3rem;
+        color:#fff;
+        //padding-top:2rem;
+        padding-left:3rem;
+        padding-bottom:1vh;
+        letter-spacing:2px;
+        font-weight:bold;
+    }
 }
 
 //////////////////////////////////////////////////////////////
